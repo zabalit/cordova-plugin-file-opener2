@@ -179,16 +179,6 @@ cordova.plugins.fileOpener2.appIsInstalled('com.adobe.reader', {
 
 ## Android APK installation limitation
 
-The following limitations apply when opening an APK file for installation:
-- On Android 8+, your application must have the `ACTION_INSTALL_PACKAGE` permission. You can add it by adding this to your app's `config.xml` file:
-```xml
-<platform name="android">
-    <config-file parent="/manifest" target="AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
-        <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-    </config-file>
-</platform>
-```
-
 - Before Android 7, you can only install APKs from the "external" partition. For example, you can install from `cordova.file.externalDataDirectory`, but **not** from `cordova.file.dataDirectory`. Android 7+ does not have this limitation.
 
 ---
